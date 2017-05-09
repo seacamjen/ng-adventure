@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { routing } from './app.routing';
 import { FirstComponent } from './first/first.component';
+import { AdminComponent } from './admin/admin.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -21,7 +22,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     HomepageComponent,
-    FirstComponent
+    FirstComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
