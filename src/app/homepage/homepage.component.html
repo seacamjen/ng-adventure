@@ -1,3 +1,4 @@
-<p>
-  homepage works!
-</p>
+<h1>You find a burrito in the fridge. Do you eat it?</h1>
+  <ul *ngFor="let answer of answers" (click)="goToFirst(answer)">
+    <li>{{answer.body}}</li>
+  </ul>
