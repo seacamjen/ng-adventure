@@ -3,6 +3,7 @@ import { Character } from '../character.model';
 import { Answer } from '../answer.model';
 import { Router } from '@angular/router';
 import { AnswerService } from '../answer.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-homepage',
@@ -11,6 +12,7 @@ import { AnswerService } from '../answer.service';
   providers: [AnswerService]
 })
 export class HomepageComponent implements OnInit {
+  characters: FirebaseListObservable<any[]>;
   answers: Answer[] = [];
 
   constructor(private router: Router, private answerService: AnswerService) { }
@@ -21,6 +23,7 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit() {
     this.answers = this.answerService.getAnswers();
+    // this.characters = this.characterService.getCharacters();
   }
 
 
